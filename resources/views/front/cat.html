@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/basic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css.map">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <header class="">
+        <div class="head container">
+            <div class="columns h-lg-ct">
+                <div class="column is-one-quarter has-text-centered">
+                    <a class="logo" href="#" title="logo"><img alt="" src="../../../public/image/orchidcruise-logo.png"></a>
+                </div>
+                <div class="column is-9">
+                    <div class="column has-text-right">
+                        <div class="h-hotline-email">
+                            <p class="h-contact"><img alt="#" src="../../../public/image/phone-icon.png"> Hotline:<a href="tel:+84%20936-638-069" style="color: #fff;">(84.0) 9 3663 8069 – Martin/Mr (24/7 service)</a> <img alt="#" src="../../../public/image/email-icon.png"> <a href="mailto:info@orchidcruises.com">info@orchidcruises.com</a> <a class="button is-primary h-reservation" href="#" id="reservation_button">RESERVATION</a></p>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class=" tabs ">
+                            <nav>
+                                <ul class="h-menu topnav" id="myTopnav">
+                                    <li class="is-active">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cabin &amp; Suites</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Itineraries</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Services &amp; Activities</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Promotion</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Photos &amp; Videos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="h-box-sl-fr">
+        <section class="h-slider">
+            <div id="slider">
+                <figure class="image">
+                    <img alt="" src="../../../public/image/travel-1737172__340.jpg"> <img alt="" src="../../../public/image/hotel-389256__340.jpg"> <img alt="" src="../../../public/image/relax-2356858__340.jpg"> <img alt="" src="../../../public/image/water-165219__340.jpg">
+                </figure>
+            </div>
+        </section>
+        <form action="" id="frm_make_reservation" method="get" name="booking">
+            <div class="container-fluid">
+                <div class="row h-make-reservation has-text-centered">
+                    <p class="h-align-control"><em>MAKE A RESERVATIONS:</em> <input id="cruise_id" name="cruise_id" type="hidden" value="1"> <span class="h-ctrls"><select class="select" id="tour_id" name="tour_id">
+                        <option data-duration="2" value="1">
+                            Orchid Cruises 2 days 1 night
+                        </option>
+                        <option data-duration="3" value="2">
+                            Orchid Cruises 3 days 2 nights
+                        </option>
+                    </select></span> <!-- Check-in Date -->
+                     <span class="h-ctrls"><input class="input-text hasDatepicker" id="check_in" name="check_in" onchange="change_check_in_date();" placeholder="Check-in date" type="text" value=""> <span class="icon" id="btn_check_in"><img alt="" src="../../../public/image/icon-date-picker.jpg"></span></span> <!-- check-out date -->
+                     <span class="h-ctrls"><input class="input-text hasDatepicker" disabled="disabled" id="check_out" placeholder="Check-out date" type="text" value=""> <span class="icon" id="btn_check_out" style="display: none;"><img alt="" src="../../../public/image/icon-date-picker.jpg"></span></span> <span class="h-ctrls"><!-- type="submit" -->
+                     <button class="btn btn-orange button is-primary btn-book-now has-text-centered" id="search_button" type="submit"><span class="h-ctrls"><span class="h-ctrls"><span class="h-ctrls">BOOK NOW</span></span></span></button></span></p>
+                </div>
+            </div>
+        </form>
+    </div><!--end h-box-sl-fr-->
+    <div class="content">
+        <div class="column has-text-centered text-uppercase bg-grey">
+            <h1>Orchid Cruise Cabins</h1>
+            <p class="center-block line-grey margin-top-20 margin-bottom-20">&nbsp;</p>
+        </div>
+        <div class="container">
+            <div class="clearfix bg-grey margin-top-40 margin-bottom-40">
+                <div class="columns">
+                    <div class="column is-6"><img alt="Suite Cabin With Balcony" src="../../../public/image/59916c42e964b.jpg" width="100%"></div>
+                    <div class="column">
+                        <div class="cabin-contents">
+                            <div class="ctitle margin-bottom-15">
+                                Suite Cabin With Balcony
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Number of cabins</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">8</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p>Average cabin size</p>
+                                </div>
+                                <div class="column">
+                                    <p>36.0 square meters</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Type of cabin</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">Twin or Double size</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Max occupancy</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">2 <span class="text-lowercase">Adults</span> <span class="plus">+</span> <span>1</span> <span>(extra bed)</span></p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-orange" href="#" style="font-size: 18px; padding: 7px 30px;">VIEW DETAIL<img alt="#" src="../../../public/image/chevron-button-right-icon.png" style="padding-bottom: 3px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix bg-grey margin-top-40 margin-bottom-40">
+                <div class="columns">
+                    <div class="column is-6"><img alt="Suite Cabin With Balcony" src="../../../public/image/59916c42e964b.jpg" width="100%"></div>
+                    <div class="column">
+                        <div class="cabin-contents">
+                            <div class="ctitle margin-bottom-15">
+                                Suite Cabin With Balcony
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Number of cabins</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">8</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p>Average cabin size</p>
+                                </div>
+                                <div class="column">
+                                    <p>36.0 square meters</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Type of cabin</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">Twin or Double size</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Max occupancy</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">2 <span class="text-lowercase">Adults</span> <span class="plus">+</span> <span>1</span> <span>(extra bed)</span></p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-orange" href="#" style="font-size: 18px; padding: 7px 30px;">VIEW DETAIL<img alt="#" src="../../../public/image/chevron-button-right-icon.png" style="padding-bottom: 3px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix bg-grey margin-top-40 margin-bottom-40">
+                <div class="columns">
+                    <div class="column is-6"><img alt="Suite Cabin With Balcony" src="../../../public/image/59916c42e964b.jpg" width="100%"></div>
+                    <div class="column">
+                        <div class="cabin-contents">
+                            <div class="ctitle margin-bottom-15">
+                                Suite Cabin With Balcony
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Number of cabins</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">8</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p>Average cabin size</p>
+                                </div>
+                                <div class="column">
+                                    <p>36.0 square meters</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Type of cabin</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">Twin or Double size</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Max occupancy</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">2 <span class="text-lowercase">Adults</span> <span class="plus">+</span> <span>1</span> <span>(extra bed)</span></p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-orange" href="#" style="font-size: 18px;margin-top:20px; padding: 7px 30px;">VIEW DETAIL<img alt="#" src="../../../public/image/chevron-button-right-icon.png" style="padding-bottom: 3px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix bg-grey margin-top-40 margin-bottom-40">
+                <div class="columns">
+                    <div class="column is-6"><img alt="Suite Cabin With Balcony" src="../../../public/image/59916c42e964b.jpg" width="100%"></div>
+                    <div class="column">
+                        <div class="cabin-contents">
+                            <div class="ctitle margin-bottom-15">
+                                Suite Cabin With Balcony
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Number of cabins</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">8</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p>Average cabin size</p>
+                                </div>
+                                <div class="column">
+                                    <p>36.0 square meters</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Type of cabin</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">Twin or Double size</p>
+                                </div>
+                            </div>
+                            <div class="content columns is-clearfix">
+                                <div class="column">
+                                    <p class="columns">Max occupancy</p>
+                                </div>
+                                <div class="column">
+                                    <p class="columns">2 <span class="text-lowercase">Adults</span> <span class="plus">+</span> <span>1</span> <span>(extra bed)</span></p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-orange" href="#" style="font-size: 18px; padding: 7px 30px;">VIEW DETAIL<img alt="#" src="../../../public/image/chevron-button-right-icon.png" style="padding-bottom: 3px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-margin-bottom is-clearfix">
+                <div class="bg-grey box-book">
+                    <div class="has-text-centered padding-top-30 padding-bottom-30">
+                        <p style="margin:-5px 0; font-size: 20px; color: #d78e15;">TRAVELING IS OUR PASSION</p>
+                        <p style="margin-bottom:20px; font-size: 20px; color: #d78e15;">LET US DESIGN YOUR UNFORGETTABLE TRIP!</p>
+                        <p style="margin:-5px 0; font-size: 15px; color: #333333;">Sometimes we live experiences that mark us for the rest of our life. If you are looking for living one of these experiences, let us help you. Our</p>
+                        <p style="margin-bottom:20px; font-size: 15px; color: #333333;">passionate personnel will assist you in order to design a tailored trip that you will remember forever.</p><a class="btn btn-orange" href="#" style="font-size: 18px; padding: 7px 30px;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--endcontent-->
+    <div id='footer'>
+            <div class="contact-footer">
+                <div class="container has-text-centered">
+                    <div class="padding-left-0">
+                        <a rel="nofollow" href="about-us" class="social">About Us</a>
+                        <a rel="nofollow" href="booking-guide/?cruise_id=1" class="social"> Booking guide &amp; Terms</a>
+                        <a rel="nofollow" href="responsible-travel" class="social">Responsible Travel</a>
+                        <a rel="nofollow" href="travel-guide" class="social">Travel Guide</a>
+                        <a rel="nofollow" href="faq" class="social" style="display: none;">FAQ's</a>
+                        <a rel="nofollow" href="news-event" class="social" style="display: none;">News &amp; Event</a>
+                        <a rel="nofollow" href="blog" class="social">Blog</a>
+                        <a rel="nofollow" href="gallery" class="social">Photos &amp; Videos</a>
+                        <a rel="nofollow" href="downloads" class="social">Download Center</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" content-footer">
+                <div class="container">
+                    <div class="columns submit-request">
+                        <div class="column is-3" style="width: 22%;">
+                            <a class="button is-success" href="#">REQUEST A RESERVATION</a>
+                        </div>
+                        <div class="column is-6" style="width: 53%; padding-left: 0px;">
+                            <form name="frm_submit" method="get" action="#">
+                                <div class="input-group">
+                        <span class="input-group-btn">
+                            <span style="font-size: 14px;" class="signup-text">SIGN UP FOR EXCLUSIVE OFFERS, NEWS</span>
+                        </span>
+                                    <input type="text" id="email_offer" name="email_offer" class="form-control email-text" placeholder="email address...">
+                                    <span class="input-group-btn">
+                            <!--<button id="btn_submit_offer" class="btn btn-secondary btn-email-submit" type="submit">SUBMIT</button>-->
+                                        <a class="button btn-email">Button</a>
+                        </span>
+                                    <span style="color: red;"></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="column is-3">
+                            <a href="#" target="_blank">
+                                <img style="margin: 0px 0px 4px 20px" alt="" src="../../../public/image/tripadvisor-icon.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" container address-footer">
+                <div class="columns">
+               <div class="column  address">
+                       <p class="office text-uppercase">Halong Head Office</p>
+                       <p class="margin-top-15"># 32, Anh Dao St, Ha Long City, Quang Ninh Province</p>
+                       <p class="margin-top-15">Tel: (+84.203) 3 846 810/ 3 846 811 </p>
+                       <p class="margin-top-15">Fax: (+84.203) 3 846 599</p>
+                       <p class="margin-top-15">Web: <a class="link" href="#">www.orchidcruises.com</a></p>
+                       <p class="margin-top-15">Email: <a class="link" href="<!--mailto:info@orchidcruises.com-->">info@orchidcruises.com</a></p>
+               </div>
+               <div class="column address">
+
+                       <p class="office text-uppercase">Hanoi Sales Office</p>
+                       <p class="margin-top-15"># 5/33B, Pham Ngu Lao str. Hoan Kiem Dist, Hanoi</p>
+                       <p class="margin-top-15">Tel: (+84.24) 3759 3098/ 3927 5797/ 3927 5796</p>
+                       <p class="margin-top-15">Fax: (+84.24) 3759 3097</p>
+                       <p class="margin-top-15">HOT LINE: (84.0) 9 3663 8069 – Martin/Mr (24/7 service)</p>
+                       <p class="margin-top-15">Email: <a class="link" href="mailto:sales@orchidcruises.com">sales@orchidcruises.com</a></p>
+               </div>
+               <div class="column address">
+                       <p class="office text-uppercase">Orchid Cruise</p>
+                       <p class="margin-top-15">International Tour Operator License No</p>
+                       <p class="margin-top-15">01-817/2011/TCDL - Issued by Vietnam National</p>
+                       <p class="text-uppercase" style="margin-top: 35px;">Verified and Protected by<img class="margin-left-15" alt="#" src="../../../public/image/ssl-geotrust.png"></p>
+               </div>
+                </div>
+            </div>
+        </div>
+    </div><!--endbody-->
+</template>
+
+
+</body>
+</html>
+
+
